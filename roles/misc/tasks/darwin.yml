@@ -27,6 +27,9 @@
   shell: defaults write com.apple.dock orientation right
   notify: restart dock
 
+- name: enable keyboard browsing for all controls
+  shell: defaults write NSGlobalDomain AppleKeyboardUIMode 2
+
 - name: install kubectl
   homebrew:
     name: kubernetes-cli
